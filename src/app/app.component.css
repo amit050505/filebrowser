@@ -1,0 +1,44 @@
+
+.container
+{
+    height:100%;
+}
+
+#selector_menu
+{ 
+    border-right:solid 1px grey;
+    height:100%;
+}
+
+.itemname
+{
+    margin:5px;
+    font-weight:bold;
+}
+.glyphicon
+{
+    margin-right: 5px;
+}
+.selector_row
+{
+height:90%;
+}
+
+#header{
+    height:10%;
+}
+.title
+{
+    font-weight:bold;
+    color:#020254;
+    border-bottom: solid 1px grey;
+    
+}
+.blue
+{
+    color:#020254;
+}
+.itemname
+{
+    cursor: pointer;
+}

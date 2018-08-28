@@ -1,0 +1,40 @@
+
+<div class="container">
+        <div class="row" id="header">
+        </div>    
+        <hr/>        
+    <div div class="row selector_row">
+        <div class="col-md-4 col-sm-4" id="selector_menu">
+
+            <div *ngFor="let item of responseData" class="itemname" >
+                <span class="glyphicon glyphicon-folder-close"></span>
+                <span  (click)="collapseHide(item, $event)" class="title itemname">{{item.title}}</span>
+                <div *ngFor="let i1 of getKeys(item)" style="padding-left:15px; display:none;"  class="itemname" >
+                        <span class="glyphicon glyphicon-folder-close"></span>
+                        <span  (click)="collapseHide(item[i1], $event)" class="itemname">{{i1}}</span>
+                        <div *ngFor="let i2 of getKeys(item[i1])" style="padding-left:15px; display:none;"  class="itemname">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                <span  (click)="collapseHide(item[i1][i2], $event)" class="itemname">{{i2}}</span>
+                                <div *ngFor="let i3 of getKeys(item[i1][i2])" style="padding-left:15px; display:none;"  class="itemname">
+                                        <span class="glyphicon glyphicon-file blue"></span> 
+                                        <span class="itemname">{{i3}}</span>
+                                </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <!-- <div *ngFor="let item of activeItems">
+                    {{item.filename}}
+            </div> -->
+
+            <kendo-grid [data]="activeItems" [height]="410">
+                    <kendo-grid-column field="filename" title="File Name" width="40">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="filetype" title="File Type" width="40">
+                        </kendo-grid-column>
+            </kendo-grid>
+        </div>
+    </div>
+</div>
