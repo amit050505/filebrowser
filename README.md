@@ -4,4 +4,6 @@
 
 ##### for live working demo, Please visit the following link
 
-https://amit050505.github.io/filebrowser/
+[File Browser v1.0]
+(https://amit050505.github.io/filebrowser/)
+
